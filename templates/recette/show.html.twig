@@ -1,0 +1,71 @@
+{# templates/recette/show.html.twig #}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ recette.titre }}</title>
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+	</head>
+	<body class="bg-gray-100">
+      <a href = '{{path('recette')}}'>recette</a>  
+      
+		{{form}}
+		<style>
+			body {
+				background-color: #f0f4f8;
+				font-family: 'Arial', sans-serif;
+			}
+			.container {
+				margin-top: 3rem;
+				padding: 2.5rem;
+				background-color: #ffffff;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+				border-radius: 0.75rem;
+			}
+			.title {
+				font-size: 2.5rem;
+				font-weight: 700;
+				text-align: center;
+				margin-bottom: 2.5rem;
+				color: #2d3748;
+			}
+			.section-title {
+				font-size: 1.75rem;
+				font-weight: 600;
+				margin-bottom: 1.5rem;
+				color: #4a5568;
+				border-bottom: 2px solid #3182ce;
+				padding-bottom: 0.5rem;
+			}
+			.ingredients-list,
+			.steps {
+				background-color: #e2e8f0;
+				padding: 1.5rem;
+				border-radius: 0.75rem;
+				margin-bottom: 2rem;
+			}
+			.ingredients-list li {
+				font-size: 1.25rem;
+				color: #2b6cb0;
+				margin-bottom: 0.5rem;
+			}
+			.steps p {
+				font-size: 1.25rem;
+				color: #2d3748;
+				line-height: 1.6;
+			}
+			.dates p {
+				font-size: 0.875rem;
+				color: #718096;
+			}
+			.created {
+				color: #38a169;
+			}
+			.modified {
+				color: #e53e3e;
+			}
+		</style>
+	</body>
+</html>

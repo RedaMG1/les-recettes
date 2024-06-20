@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier le tour{% endblock %}
+
+{% block body %}
+	<div class="col-lg-12 contenu-blanc shadow-lg ">
+
+		<div class="form">
+			{{ form_start(form) }}
+			<h2>Modifier le tour</h2>
+			<div class="form-group">
+				{# <label for="email">Nom du tour:</label> #}
+				<div class="relative">
+					{{ form_row(form.titre) }}
+					<i class="fa fa-user"></i>
+				</div>
+			</div>
+			<div class="form-group">
+				{# <label for="email">Prix:</label> #}
+				<div class="relative">
+					{# <input class="form-control" type="email" required="" placeholder="Tapez votre adresse e-mail..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"> #}
+					{# {{ form_row(form.image) }} #}
+					<i class="fa fa-envelope"></i>
+				</div>
+			</div>
+			<div class="form-group">
+				{# <label for="email">Image:</label> #}
+				<div class="relative">
+					<div class="input-group">
+						{# <label class="input-group-btn">
+							<span class="btn btn-default">
+								Parcourir&hellip;
+								<input type="file" style="display: none;" multiple>
+							</span>
+						</label> #}
+						{# {{ form_row(form.image) }} #}
+						{# <input type="text" class="form-control" required="" placeholder="Pièce jointe..." readonly>
+						<i class="fa fa-link"></i> #}
+					</div>
+				</div>
+			</div>
+			{{ form_end(form) }}
+		</div>
+
+		<div class="thanks" style="display: none;">
+			<h4>Merci!</h4>
+			<p>
+				<small>Votre message a été envoyé avec succès.</small>
+			</p>
+		</div>
+	</div>
+
+<style>
+    .contenu-blanc {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+    }
+	.inpTitre{
+		width : 100%;
+	}
+	.inpEtapes{
+		width : 100%;
+		height : 12vh;
+	}
+    .shadow-lg {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    .relative .fa {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #aaa;
+    }
+
+    input.form-control {
+        width: 100%;
+        padding: 10px 10px 10px 30px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    input.form-control:focus {
+        border-color: #5cb3fd;
+        box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
+        outline: none;
+    }
+
+    .btn {
+        background-color: #5cb3fd;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #4a9cdb;
+    }
+
+    .thanks {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .thanks h4 {
+        margin-bottom: 10px;
+    }
+</style>
+
+{% endblock %}

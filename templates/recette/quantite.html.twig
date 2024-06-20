@@ -1,0 +1,36 @@
+{# templates/recette/quantite.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Create New Quantities{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">quantite</h3>
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        {% for quantityForm in form.quantities %}
+                            <div class="form-row mb-3">
+                                <div class="col">
+                                    {{ form_row(quantityForm.qte) }}
+                                </div>
+                                <div class="col">
+                                    {{ form_row(quantityForm.ingredients) }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group text-center">
+                        {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

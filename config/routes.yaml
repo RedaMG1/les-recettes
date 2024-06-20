@@ -1,0 +1,25 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+home:
+    path: /home
+    controller: App\Controller\HomeController::index
+
+recette:
+    path: /recette
+    controller: App\Controller\RecetteController::index
+
+quantity:
+    path: /quantity
+    controller: App\Controller\QuantityController::quantityCreate
+
+login:
+    path: /login
+    controller: App\Controller\SecurityController::index
+    
+user:
+    path: /user
+    controller: App\Controller\UserController::adminIndex
